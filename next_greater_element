@@ -1,1 +1,22 @@
+#Next greater element
+def next_greater_element(arr):
+    n=len(arr)
+    stack=[]
+    result=[-1]*n
+    for i in range(n):
+        print(i)
+        while stack and arr[i] > arr[stack[-1]]:
+            result[stack.pop()] = arr[i]
+            print('Result')
+            print(result)
+        stack.append(i)
+        print('Stack')
+        print(stack)
+    print (result)
+        
 
+    
+
+# Example usage
+arr = [4, 5, 2, 10, 8]
+next_greater_element(arr)
